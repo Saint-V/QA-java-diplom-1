@@ -3,17 +3,7 @@ import praktikum.Bun;
 
 import static org.junit.Assert.assertEquals;
 
-public class BunTests {
-
-    /**
-     * Проверка метода getName: проверяет, что название булочки возвращается корректно.
-     */
-    @Test
-    public void testGetName() {
-        Bun bun = new Bun("black bun", 100.0f);
-        assertEquals("Название булочки некорректно", "black bun", bun.getName());
-    }
-
+public class BunGetPriceTest {
     /**
      * Проверка метода getPrice: проверяет, что цена булочки возвращается корректно.
      */
