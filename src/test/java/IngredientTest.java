@@ -5,7 +5,7 @@ import praktikum.IngredientType;
 
 import static org.junit.Assert.assertEquals;
 
-public class IngredientGetTypeTest {
+public class IngredientTest {
     private Ingredient ingredient;
     private final IngredientType expectedType = IngredientType.SAUCE;
     private final String expectedName = "hot sauce";
@@ -14,6 +14,22 @@ public class IngredientGetTypeTest {
     @Before
     public void setUp() {
         ingredient = new Ingredient(expectedType, expectedName, expectedPrice);
+    }
+
+    /**
+     * Проверка метода getName: проверяет, что название ингредиента возвращается корректно.
+     */
+    @Test
+    public void testGetName() {
+        assertEquals("Название ингредиента некорректно", expectedName, ingredient.getName());
+    }
+
+    /**
+     * Проверка метода getPrice: проверяет, что цена ингредиента возвращается корректно.
+     */
+    @Test
+    public void testGetPrice() {
+        assertEquals("Цена ингредиента некорректна", expectedPrice, ingredient.getPrice(), 0.0f);
     }
 
     /**
